@@ -1,8 +1,6 @@
 ---
-title: Timeline
-layout: timeline
+title: Cronologia
+layout: timelinejs
 permalink: /timeline.html
-# a timeline visualization will be added below the content in this file
+# timetable orizzontale (TimelineJS), generata automaticamente dal campo "date" delle schede
 ---
-
-## Collection Timeline

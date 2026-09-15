@@ -1,4 +1,4 @@
-<footer class="bg-dark pt-4 mt-auto container-fluid">
+<footer class="bg-primary pt-4 mt-auto container-fluid">
 
     <div class="row border-bottom border-white pb-4 mb-2">
 
@@ -45,7 +45,10 @@
     </div>
 
     <div class="col-md-12 text-center pt-3 pb-1">
-        <p class="text-white">Last updated {{ site.time | date: '%Y' }}</p>
+        <p class="text-white">
+            Ultimo aggiornamento {{ site.time | date: '%Y' }}
+            &middot; <a class="text-white" href="{{ '/data.html' | relative_url }}">Dati della mostra</a>
+        </p>
     </div>
 
 </footer>

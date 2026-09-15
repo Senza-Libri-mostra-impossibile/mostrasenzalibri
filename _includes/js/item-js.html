@@ -40,7 +40,15 @@ function displayItem(record, prev_id, next_id, compound_object) {
     }
     document.getElementById("item-format").innerHTML = itemFormat;
     document.getElementById("item-title").innerHTML = record.format.includes('record') ? objectTitle : objectTitle + '<a href="#item-metadata" class="ms-5 btn btn-sm btn-outline-dark small">Item Info <svg class="bi icon-sprite" role="img" aria-label="Jump to Item Info"><use xlink:href="{{ "/assets/lib/cb-icons.svg" | relative_url }}#arrow-down"/></svg></a>';
-    
+
+    /* add subtitle and formal bibliographic citation right under the title, instead of burying them in the generic metadata list below */
+    if (record.sottotitolo) {
+        document.getElementById("item-subtitle").innerHTML = record.sottotitolo;
+    }
+    if (record.citazione_bibliografica) {
+        document.getElementById("item-citation").innerHTML = record.citazione_bibliografica;
+    }
+
     /* add object */ 
     var format = "" + record.format;
     var objectLink = findFileLink(record);
@@ -82,7 +90,8 @@ function displayItem(record, prev_id, next_id, compound_object) {
     /* function to add item metadata */
     function generateMetadata(item) {
         var fields = '<dl>';
-        {% for f in fields %}{% if f.browse_link == "true" %}
+        {%- assign header_fields = "title;sottotitolo;citazione_bibliografica;date" | split: ";" -%}
+        {% for f in fields %}{% unless header_fields contains f.field %}{% if f.browse_link == "true" %}
         if (item[{{ f.field | jsonify }}]) {
             var topics = item[{{ f.field | jsonify }}].split(';');
             var browseLinks = "";
@@ -95,7 +104,7 @@ function displayItem(record, prev_id, next_id, compound_object) {
         }
         {%- else -%}
         if (item[{{ f.field | jsonify }}]) { fields += '<dt class="field">{{ f.display_name }}:</dt> <dd class="field-value">{% if f.external_link == "true" %}<a href="' + item[{{ f.field | jsonify }}] + '" target="_blank" rel="noopener">' + item[{{ f.field | jsonify }}] + '</a>{% else %}' + item[{{ f.field | jsonify }}] + '{% endif %}</dd>'; }
-        {% endif %}{% endfor %}
+        {% endif %}{% endunless %}{% endfor %}
         fields += '</dl>';
         return fields;
     };
