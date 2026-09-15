@@ -1,7 +1,7 @@
 field,index,display
 title,true,true
+sottotitolo,true,true
 date,true,true
-creator,true,false
-description,true,true
-subject,true,true
-location,true,false
+descrizione_codicologica,true,false
+saggio_critico,true,false
+firma_scheda,true,true

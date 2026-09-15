@@ -1,15 +1,11 @@
 field,display_name,browse_link,external_link
-title,Title,
-creator,Creator,
-date,Date Created,
-description,Description,
-subject,Subjects,true
-location,Location
-latitude,Latitude
-longitude,Longitude
-source,Source
-identifier,Source Identifier,,
-type,Type,
-format,Format,
-rights,Rights,
-rightsstatement,Rights Statement,,true
+title,Titolo,,
+sottotitolo,Sottotitolo,,
+citazione_bibliografica,Citazione bibliografica,,
+date,Data,,
+descrizione_codicologica,Descrizione codicologica,,
+saggio_critico,Saggio critico,,
+bibliografia_scheda,Bibliografia,,
+link_digitalizzazione,Digitalizzazione integrale,,true
+link_bibliografico,Approfondimento bibliografico,,true
+firma_scheda,A cura di,,

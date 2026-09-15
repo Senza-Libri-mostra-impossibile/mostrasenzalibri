@@ -1,27 +1,22 @@
 ---
-title: About
+title: Il progetto
 layout: about
 permalink: /about.html
-# include CollectionBuilder info at bottom
 credits: true
-# Edit the markdown on in this file to describe your collection
-# Look in _includes/feature for options to easily add features to the page
 ---
 
-{% include feature/jumbotron.html objectid="https://cdil.lib.uidaho.edu/images/palouse_sm.jpg" %}
+# Senza libri
+## Una mostra bibliografica impossibile
 
-{% include feature/nav-menu.html sections="About the Collection;About the About Page" %}
+*a cura di Chiara Araldi e Francesco Mele — Utopia, settembre 2026*
 
-## About the Collection
+Certo, se in una mostra si intende far vedere libri, i libri sono necessari. Però, se si facesse tutto in digitale, sfruttando l'immenso e spesso confuso patrimonio librario riprodotto e disponibile gratuitamente (al momento) sul web? Tutto sommato, in una esposizione si vedono solo due pagine di un libro aperto alla volta e invece si potrebbe rendere disponibile la digitalizzazione integrale...
 
-This site is generated using [CollectionBuilder-GH](https://collectionbuilding.github.io/gh/), a project to create a free and simple digital collection using [GitHub Pages](https://pages.github.com/) from: 
+Da qui nasce la spericolata idea, un po' pazza e un po' provocatoria, di organizzare una mostra "impossibile" (senza stanziamenti, assicurazioni, spazi e vetrinette) con alcuni fulgidi esempi del meglio del libro a stampa illustrato italiano dal XV al XX secolo. Poco più di due dozzine di pezzi, altrettanti giovani (alcuni meno...) bibliografi volonterosi, un pizzico di incoscienza, un altro di tecnologia ed eccoci sul web!
 
-- a CSV of collection metadata
-- a folder of JPG images or PDF documents
+Dietro questo esperimento, tra il ludico e, appunto, il provocatorio, ci stanno però alcuni pensieri. In primo luogo, che c'è una miniera di materiale importante nelle nostre biblioteche, non meno che riprodotto in rete, che attende di essere fatto conoscere: abbiamo studiato con questo scopo. In secondo, che per valorizzare è occorso certo del tempo, il nostro tempo (cioè un impegno, una volontà, un sacrificio), ma soprattutto è stata necessaria una idea, anche se semplice. Terzo, che le competenze (un po' come gli evangelici talenti) sono interessanti se divengono utili, se possono essere messe in gioco, se tendono "alla pubblica felicità", come avrebbe detto un vecchio bibliotecario di nome Ludovico Antonio Muratori (1672-1750). Quarto, che a fare una mostra insieme ci si diverte anche e certo si imparano tante cose. Che tutto ciò ha un valore sociale e una dignità politica, perché in un mondo impazzito, dilaniato da guerre e massacri, «la bellezza ci aiuta ad alzare lo sguardo verso il cielo» (Leone XIV, Castel Gandolfo, 18 luglio 2026).
 
-The template repository features four objects from the University of Idaho Library's [Digital Collections](https://www.lib.uidaho.edu/digital). 
+Con questo spirito presentiamo il piccolo esperimento costituito della mostra. Ci piacerebbe che 10, 100, 1.000 bibliotecari e studiosi dei libri volessero provare anche loro a bucare il muro della burocrazia, del tran tran, della noia istituzionale, per donare alle loro comunità un pezzetto di cultura. In questo senso, ci piacerebbe avere molta concorrenza!
 
-For full details of creating your own collection site, visit [CollectionBuilder Documentation](https://collectionbuilder.github.io/cb-docs/)!
-
-<!-- IMPORTANT!!! DELETE this comment and the include below when you are finished editing this page for your collection. The include below introduces about page features. They will show up on your collection's about page until you delete it.  -->
-{% include cb/about_the_about.md %} 
+*A nome degli autori e delle autrici (che firmano ciascuno la propria scheda),*
+*i due anziani del gruppo Luca e Edoardo*
