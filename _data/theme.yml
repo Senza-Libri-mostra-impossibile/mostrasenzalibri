@@ -8,10 +8,8 @@
 #
 # featured image is used in home page banner and in meta markup to represent the collection
 # use either an objectid (from an item in this collect), a relative location of an image in this repo (ex. /assets/img/feature.jpg), or a full url to an image elsewhere
-# NOTA: placeholder provvisorio (frontespizio Barbieri) in attesa dell'immagine di copertina
-# dedicata fornita da Francesco. Da sostituire con /assets/img/home-cover.jpg (o simile)
-# non appena il file e' disponibile.
-featured-image: 08-barbieri-viazo
+# NOTA: immagine provvisoria fornita da Francesco (15/9), da sostituire quando pronta la versione definitiva
+featured-image: /assets/img/home-cover.jpg
 # optional: add extra padding around collection title for a larger image feature.
 home-title-y-padding: 8em # Default is 8em
 # optional: change position of background image, center, top, bottom
