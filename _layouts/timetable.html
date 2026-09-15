@@ -1,0 +1,116 @@
+---
+# "Cronologia" page: compact horizontal timetable, one column per year that
+# actually has a scheda (not proportional to real elapsed time - a run of
+# centuries with only a few items would otherwise force a very long,
+# mostly-empty scroll). Each column shows a thumbnail of the edition(s)
+# published that year, linking straight to the item page.
+layout: page-full-width
+---
+{%- if site.data.theme.icons -%}{% assign icons = site.data.theme.icons %}{% else %}
+{% assign cb_icons = site.pages | where: "name","cb-icons.svg" | first %}
+{% assign icons = cb_icons.icons %}{%- endif -%}
+{%- assign field = site.data.theme.timeline-field | default: "date" -%}
+{% if site.data.theme.timeline-child-objects == true %}
+{%- assign items = site.data[site.metadata] | where_exp: 'item','item.objectid' -%}
+{% else %}
+{%- assign items = site.data[site.metadata] | where_exp: 'item','item.objectid' | where_exp: 'item','item.parentid == nil' -%}
+{% endif %}
+{%- assign items = items | where_exp: 'item','item[field]' | sort: field -%}
+{%- assign years = items | map: field | uniq -%}
+
+{{ content }}
+
+<div class="timetable-scroll">
+  <div class="timetable-track">
+    {% for year in years %}
+    {%- assign yearItems = items | where: field, year -%}
+    <div class="timetable-year-col" id="y{{ year }}">
+      <div class="timetable-year-label">{{ year }}</div>
+      {% for item in yearItems %}
+      <a class="timetable-thumb-link" href="{% if item.parentid == nil %}{{ '/item.html' | relative_url | append: '?id=' | append: item.objectid }}{% else %}{{ '/item.html' | relative_url | append: '?id=' | append: item.parentid }}#{{ item.objectid }}{% endif %}" title="{{ item.title | escape }}">
+        {% if item.format contains 'image' or item.youtubeid %}
+        <img class="timetable-thumb lazyload" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 4'%3E%3C/svg%3E" data-src="{% if item.youtubeid %}{{ 'https://img.youtube.com/vi/' | append: item.youtubeid | append: '/hqdefault.jpg' }}{% elsif item.filename contains '/' %}{{ item.filename }}{% else %}{{ item.filename | prepend: '/objects/' | relative_url }}{% endif %}" alt="{{ item.title | escape }}">
+        {% else %}
+        <span class="timetable-thumb timetable-thumb-fallback">
+          <svg class="bi" fill="currentColor" aria-hidden="true"><use xlink:href="{{ '/assets/lib/cb-icons.svg' | relative_url }}#{% if item.format contains 'audio' %}{{ icons.icon-audio }}{% elsif item.format contains 'video' %}{{ icons.icon-video }}{% elsif item.format contains 'pdf' %}{{ icons.icon-pdf }}{% else %}{{ icons.icon-default }}{% endif %}"/></svg>
+        </span>
+        {% endif %}
+        <span class="timetable-thumb-caption">{{ item.title | truncate: 42 }}</span>
+      </a>
+      {% endfor %}
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+.timetable-scroll {
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 1rem;
+}
+.timetable-track {
+    display: flex;
+    align-items: flex-start;
+    gap: 2.5rem;
+    padding: 2.5rem 1rem 1rem 1rem;
+    position: relative;
+    width: max-content;
+    min-width: 100%;
+}
+.timetable-track::before {
+    content: "";
+    position: absolute;
+    top: 3.75rem;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: #B22727;
+    z-index: 0;
+}
+.timetable-year-col {
+    flex: 0 0 auto;
+    width: 150px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+.timetable-year-label {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 1.15rem;
+    background-color: #fff;
+    padding: 0 0.6rem;
+    margin-bottom: 1rem;
+}
+.timetable-thumb-link {
+    display: block;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: inherit;
+}
+.timetable-thumb {
+    display: block;
+    width: 130px;
+    height: 170px;
+    object-fit: cover;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    background-color: #f4f4f4;
+}
+.timetable-thumb-fallback {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.timetable-thumb-fallback svg {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+.timetable-thumb-caption {
+    display: block;
+    font-size: 0.8rem;
+    margin-top: 0.4rem;
+    line-height: 1.2;
+}
+</style>
