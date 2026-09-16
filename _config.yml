@@ -9,14 +9,13 @@
 #
 # url is site domain, full URL to the production location of your collection
 # on GitHub Pages follows the pattern username.github.io
-# NOTA: valore provvisorio, valido finché non è attivo il dominio personalizzato
-# senzalibri.libriantiqui.it (vedi procedura DNS con Libri Antiqui). Una volta
-# attivo il dominio, aggiornare qui: url -> https://senzalibri.libriantiqui.it
-# e baseurl -> "" (stringa vuota).
-url: https://senza-libri-mostra-impossibile.github.io
+# NOTA: dominio personalizzato attivo dal 16/9/2026 (DNS verificato: CNAME +
+# TXT propagati e confermati). Il sito occupa la radice del sottodominio,
+# non una sottocartella, quindi baseurl è vuoto.
+url: https://senzalibri.libriantiqui.it
 # baseurl is path to location on the domain if necessary e.g. /digital/hjccc
 # on GitHub Pages it is your github repository's name prefixed with a /
-baseurl: /mostrasenzalibri
+baseurl: ""
 # location of code, the full url to your github repository
 source-code: https://github.com/Senza-Libri-mostra-impossibile/mostrasenzalibri
 
