@@ -9,8 +9,12 @@ _site/
 .bundle/
 vendor/
 
-# Ignore mac files 
+# Ignore mac files
 .DS_Store
+
+# Cartella creata dall'app desktop di Claude per i file scaricati in chat;
+# non fa parte del sito e non va tracciata nel repository.
+Claude outputs/
 
 # temporarily ignore gemfile.lock
 Gemfile.lock
