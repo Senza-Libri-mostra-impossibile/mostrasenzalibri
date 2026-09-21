@@ -1,21 +1,17 @@
 ---
-# Home page, in pulito: niente banner o widget demo, solo la presentazione della
-# mostra (con link alla pagina completa "Il progetto") e un invito a sfogliare le
-# schede. L'immagine/titolo/sottotitolo in cima sono gestiti da collection-banner.html
-# tramite "featured-image" in _data/theme.yml, non da questo file.
+# Home page, in pulito: niente banner o widget demo. L'immagine/titolo/sottotitolo
+# in cima sono gestiti da collection-banner.html tramite "featured-image" in
+# _data/theme.yml, non da questo file.
+#
+# NOTA (21/9): il testo "Il progetto" che stava qui duplicava il contenuto della
+# pagina "about" (Il progetto). Su richiesta, è stato tolto: la home resta
+# volutamente vuota, con la sola immagine, in attesa del breve testo dedicato
+# alla home che verrà fornito in seguito. Il pulsante "Sfoglia le schede" è
+# stato mantenuto perché è un link di navigazione, non testo del progetto.
 layout: page
 ---
 <div class="row justify-content-center">
   <div class="col-lg-8">
-
-    <div class="card mb-4 border-0">
-      <div class="card-body">
-        <h2 class="card-title h4">Il progetto</h2>
-        <p class="card-text">Certo, se in una mostra si intende far vedere libri, i libri sono necessari. Però, se si facesse tutto in digitale, sfruttando l'immenso e spesso confuso patrimonio librario riprodotto e disponibile gratuitamente (al momento) sul web? Tutto sommato, in una esposizione si vedono solo due pagine di un libro aperto alla volta e invece si potrebbe rendere disponibile la digitalizzazione integrale...</p>
-        <p class="card-text">Da qui nasce la spericolata idea, un po' pazza e un po' provocatoria, di organizzare una mostra "impossibile" (senza stanziamenti, assicurazioni, spazi e vetrinette) con alcuni fulgidi esempi del meglio del libro a stampa illustrato italiano dal XV al XX secolo. Poco più di due dozzine di pezzi, altrettanti giovani (alcuni meno...) bibliografi volonterosi, un pizzico di incoscienza, un altro di tecnologia ed eccoci sul web!</p>
-        <a class="btn btn-outline-primary" href="{{ '/about.html' | relative_url }}">Leggi tutto &raquo;</a>
-      </div>
-    </div>
 
     <div class="text-center mb-4">
       <a class="btn btn-primary btn-lg" href="{{ '/browse.html' | relative_url }}">Sfoglia le schede &raquo;</a>
