@@ -8,7 +8,34 @@ permalink: /credits.html
 
 # Credits
 
-*Sezione in preparazione: sarà completata con i credits di tutte le autrici e gli autori delle schede.*
+## Hanno partecipato all'iniziativa, fornendo le schede
+
+- Edoardo Barbieri
+- Luca Rivali
+- Chiara Araldi
+- Alessia Arcidiacono
+- Chiara Azzolini
+- Marco Barberis
+- Maddalena Baschirotto
+- Celeste Sofia Borinelli
+- Sara Brasca
+- Rachele Buzzetti
+- Monica Cammaroto
+- Daniela Ceccon
+- Lorenzo Consorti
+- Elena Ferrazzi
+- Francesco Formigari
+- Lucia Giustozzi
+- Giulia Guerriero
+- Alice Maggiolini
+- Francesca Magnanti
+- Davide Martini
+- Francesco Mele
+- Matilde Operato
+- Aurora Orlando
+- Alessandro Pulcini
+- Pierfilippo Saviotti
+- Maddalena Terraneo
 
 ## Immagini
 
