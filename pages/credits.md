@@ -42,4 +42,4 @@ permalink: /credits.html
 
 ## Immagini
 
-Le fotografie dell'incunabolo delle *Vite de sancti padri* utilizzate come copertina delle pagine "Cronologia" e "Credits" sono tratte dalla mostra [*L'arte della stampa nella Venezia del Cinquecento*](https://www.museibassano.it/it/mostra/l-arte-della-stampa-nella-venezia-del-cinquecento) (Biblioteca Civica di Bassano del Grappa — Musei Biblioteca Archivio di Bassano del Grappa, 31 maggio–19 ottobre 2024).
+Le fotografie dell'incunabolo delle *Vita de sancti padri vulgare historiata* (Venezia, 1494; ISTC ih00233000) utilizzate come copertina delle pagine "Cronologia" e "Credits" sono tratte dalla mostra [*L'arte della stampa nella Venezia del Cinquecento*](https://www.museibassano.it/it/mostra/l-arte-della-stampa-nella-venezia-del-cinquecento) (Biblioteca Civica di Bassano del Grappa — Musei Biblioteca Archivio di Bassano del Grappa, 31 maggio–19 ottobre 2024).
