@@ -8,6 +8,13 @@ permalink: /credits.html
 
 # Credits
 
+## Patrocini
+
+<div class="text-center my-4">
+  <img src="{{ '/assets/img/patrocinio-pistoia-2026.jpg' | relative_url }}" alt="Pistoia Capitale Italiana del Libro 2026" class="img-fluid" style="max-width: 200px;">
+  <p class="mt-2">Con il patrocinio di Pistoia Capitale Italiana del Libro 2026</p>
+</div>
+
 ## Hanno partecipato all'iniziativa, fornendo le schede
 
 - Edoardo Barbieri
